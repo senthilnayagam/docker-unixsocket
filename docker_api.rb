@@ -25,6 +25,19 @@ def post(uri,post_data={})
 @request.exec(@sock, "1.1", uri)
 process_response
 end  
+
+def delete(uri)
+@request = Net::HTTP::Delete.new(uri)
+@request.exec(@sock, "1.1", uri)
+process_response 
+end  
+
+def put(uri,put_data={})
+@request = Net::HTTP::Put.new(uri)
+@request.set_form_data(put_data)
+@request.exec(@sock, "1.1", uri)
+process_response
+end  
   
 private
   
