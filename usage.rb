@@ -38,3 +38,12 @@ puts "images viz"
 
 
 dump d.post("/images/create?fromImage=base",{})
+
+
+dump d.version
+
+dump d.info
+
+dump d.images
+
+dump d.images(true)
