@@ -1,31 +1,24 @@
-a ruby client for Docker API
+#docker-unixsocket
 
+A ruby client for Docker API
 
-supports the new Docker api via unix socket
+##Overview
 
+docker-unixsocket client supports the new Docker api via unix socket. The client should be run as root. For more details on the usage, refer ```usage.rb```
 
-this script can be run as root or with sudo
+##Installing
 
-find usage in usage.rb
+```gem install rack-api-key```
 
+##Running
 
+```ruby server.rb```
 
-work in progress
-implementing a ruby server in sinatra to access the docker api remotely
+Access the application at ```http://localhost:4567/api/hello```
 
-you can implement a backend to store the key validation, use any custom header
-
-
-gem install rack-api-key
-
-ruby server.rb 
-
-http://localhost:4567/api/hello
-
-
+##Usage
 curl --header "X_CUSTOM_API_HEADER: key" http://localhost:4567/api/hello
 
-
+##Author
 Senthil Nayagam
-
 senthil (at) railsfactory dot com
